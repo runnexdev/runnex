@@ -1,12 +1,31 @@
 ---
 title: "Quickstart"
-description: "Try Runnex in under 5 minutes"
+description: "Get started with Runnex in minutes"
+icon: "rocket"
+iconType: "solid"
 ---
 
-Yes - it's just 2 steps.
+Getting started with Runnex is simple and takes just two quick steps.
 
-1. Install the Runnex GitHub App
-   Login to [runnex.dev](https://runnex.dev/login) and follow the prompts to install the Runnex GitHub App.
+### 1. Install the GitHub App
 
-2. Switching to Runnex Runners in Workflow Files
-   Switch your workflow files to use Runnex Runners.
+Head over to [runnex.dev](https://runnex.dev/login) and authenticate with your
+GitHub account. Follow the installation wizard to add the Runnex GitHub App to
+your organization.
+
+<Info>
+  Currently, Runnex is available exclusively for GitHub organizations. Support
+  for personal repositories is coming soon.
+</Info>
+
+### 2. Update Your Workflow Files
+
+Modify your GitHub Actions workflow files to use Runnex's high-performance
+runners by updating the `runs-on` field:
+
+```yaml
+jobs:
+  build:
+    runs-on: runnex-2vcpu-ubuntu-2404
+    steps:
+```

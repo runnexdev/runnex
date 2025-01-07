@@ -1,0 +1,36 @@
+---
+title: "Which Runner Should I Use?"
+description: "Learn how to select the optimal runner configuration for your workload"
+---
+
+## Which Runner Should I Use?
+
+Selecting the right runner for your CI/CD pipeline is crucial for balancing
+build times and costs. To make an informed decision, you can leverage the
+built-in matrix feature in GitHub Actions, which allows you to test your
+workflow on multiple runners simultaneously.
+
+### Using the Matrix Feature
+
+The matrix feature in GitHub Actions enables you to run a job with different
+configurations, specified as a matrix of key-value pairs. In this case, we'll
+use the `runs-on` key to compare the performance of different BuildJet runners.
+
+### Example Configuration
+
+To use the matrix feature, modify your GitHub Actions workflow file (e.g.,
+`main.yml` or a similar file in the `.github/workflows` directory) as follows:
+
+```yaml
+jobs:
+  test:
+    strategy:
+      fail-fast: true # In case one of the jobs fails, the other jobs will be cancelled
+      matrix:
+        runs-on: [ buildjet-2vcpu-ubuntu-2204, buildjet-4vcpu-ubuntu-2204, buildjet-8vcpu-ubuntu-2204, buildjet-16vcpu-ubuntu-2204 ]
+    name: Test - ${{matrix.runs-on}}
+    runs-on: ${{matrix.runs-on}}
+    steps:
+      - uses: actions/checkout@v2
+      ...
+```

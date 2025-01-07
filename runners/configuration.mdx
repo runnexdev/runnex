@@ -1,17 +1,69 @@
 ---
 title: "Configuration"
-description: "Learn more about the different instances to choose from"
+description: "Aavailable runner configurations and specifications"
+icon: "code"
+iconType: "solid"
 ---
 
 ## Runner Types
 
-#### x64
+Runnex offers a variety of runner configurations optimized for different
+workload needs, from lightweight builds to resource-intensive tasks.
 
-| Name                     | vCPU | Memory | Disk Size |
-| :----------------------- | ---- | ------ | --------- |
-| runnex                   |  2    | 8 GB       | 40 GB     |
-| runnex-ubuntu-latest     | 2     | 8 GB       | 40 GB    |
-| runnex-2vcpu-ubuntu-2404 | 2     | 8 GB       | 40 GB     |
-| runnex-4vcpu-ubuntu-2404                        |  4    |  16 GB      |    40 GB       |
+### Quick Start Aliases
 
-####
+For convenience, we provide aliases that point to our recommended default
+configuration:
+
+| Alias                | Maps To                  | Best For                 |
+| :------------------- | :----------------------- | :----------------------- |
+| runnex-ubuntu-latest | runnex-2vcpu-ubuntu-2404 | Latest Ubuntu LTS builds |
+
+### Available x64 Configurations
+
+All runners come with high-performance NVMe SSDs and the latest Ubuntu 24.04
+LTS:
+
+| Runner Name               | vCPUs | Memory | Storage |
+| :------------------------ | :---: | :----: | :-----: |
+| runnex-2vcpu-ubuntu-2404  |   2   |  8 GB  |  50 GB  |
+| runnex-4vcpu-ubuntu-2404  |   4   | 16 GB  |  50 GB  |
+| runnex-8vcpu-ubuntu-2404  |   8   | 32 GB  | 100 GB  |
+| runnex-16vcpu-ubuntu-2404 |  16   | 64 GB  | 100 GB  |
+| runnex-32vcpu-ubuntu-2404 |  32   | 128 GB | 100 GB  |
+
+## Images
+
+### Base Image and Compatibility
+
+Our runners use GitHub Actions runner images as their foundation, ensuring:
+
+- 100% compatibility with GitHub Actions workflows
+- Extensive pre-installed software packages
+- Regular security updates and patches
+
+For a detailed list of pre-installed software, visit the official
+[actions/runner-images](https://github.com/actions/runner-images) repository.
+
+### Image Update Policy
+
+We maintain a strict update schedule to keep runners secure and up-to-date:
+
+- Automatic synchronization with GitHub's official images
+- Updates typically deployed within 4 hours of release
+- Priority given to security patches and critical updates
+- Zero-downtime rolling updates across our fleet
+
+### Custom Image Support
+
+While we currently don't support custom images, our standard images are
+carefully curated to support common CI/CD scenarios. Our roadmap includes:
+
+- Evaluating custom image support based on user feedback
+- Potential future support for organization-specific images
+- Focus on maintaining optimal performance and security
+
+<Info>
+  Need a specific software package or configuration? Contact our support team to
+  discuss your requirements.
+</Info>

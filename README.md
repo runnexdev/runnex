@@ -4,7 +4,8 @@
 <p align="center">
   <a href="https://runnex.dev"><b>Website</b></a> •
   <a href="https://docs.runnex.dev"><b>Documentation</b></a> •
-  <a href="https://github.com/runnexdev/runnex/issues"><b>Questions</b></a>
+  <a href="https://github.com/runnexdev/runnex/issues"><b>Questions</b></a> •
+  <a href="https://ctrlplane.dev"><b>By Ctrlplane</b></a>
 </p>
 
 ---

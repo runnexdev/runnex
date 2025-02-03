@@ -1,6 +1,7 @@
-# Runnex
-
-Runnex is a platform for running CI/CD pipelines on high-performance runners.
+<p align="center">
+  <h1>Runnex</h1>
+  <p>Runnex is a platform for running CI/CD pipelines on high-performance runners.</p>
+</p>
 
 <p align="center">
   <a href="https://runnex.dev"><b>Website</b></a> •

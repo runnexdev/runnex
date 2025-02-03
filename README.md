@@ -1,32 +1,29 @@
-# Mintlify Starter Kit
+# Runnex
 
-Click on `Use this template` to copy the Mintlify starter kit. The starter kit contains examples including
+Runnex is a platform for running CI/CD pipelines on high-performance runners.
 
-- Guide pages
-- Navigation
-- Customizations
-- API Reference pages
-- Use of popular components
+<p align="center">
+  <a href="https://runnex.dev"><b>Website</b></a> •
+  <a href="https://docs.runnex.dev"><b>Documentation</b></a> •
+  <a href="https://github.com/runnexdev/runnex/issues"><b>Questions</b></a>
+</p>
 
-### Development
+## Getting Started
 
-Install the [Mintlify CLI](https://www.npmjs.com/package/mintlify) to preview the documentation changes locally. To install, use the following command
+### 1. Install the GitHub App
 
+Head over to [runnex.dev](https://runnex.dev/login) and authenticate with your
+GitHub account. Follow the installation wizard to add the Runnex GitHub App to
+your organization.
+
+### 2. Update Your Workflow Files
+
+Modify your GitHub Actions workflow files to use Runnex's high-performance
+runners by updating the `runs-on` field:
+
+```yaml
+jobs:
+  build:
+    runs-on: runnex-2vcpu-ubuntu-2404
+    steps: ...
 ```
-npm i -g mintlify
-```
-
-Run the following command at the root of your documentation (where mint.json is)
-
-```
-mintlify dev
-```
-
-### Publishing Changes
-
-Install our Github App to auto propagate changes from your repo to your deployment. Changes will be deployed to production automatically after pushing to the default branch. Find the link to install on your dashboard. 
-
-#### Troubleshooting
-
-- Mintlify dev isn't running - Run `mintlify install` it'll re-install dependencies.
-- Page loads as a 404 - Make sure you are running in a folder with `mint.json`

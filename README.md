@@ -1,13 +1,13 @@
-<p align="center">
-  <h1>Runnex</h1>
-  <p>Runnex is a platform for running CI/CD pipelines on high-performance runners.</p>
-</p>
+<h1 align="center">Runnex</h1>
+<p align="center">Runnex is a platform for running CI/CD pipelines on high-performance runners.</p>
 
 <p align="center">
   <a href="https://runnex.dev"><b>Website</b></a> •
   <a href="https://docs.runnex.dev"><b>Documentation</b></a> •
   <a href="https://github.com/runnexdev/runnex/issues"><b>Questions</b></a>
 </p>
+
+---
 
 ## Getting Started
 
